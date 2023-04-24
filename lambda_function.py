@@ -15,6 +15,7 @@ clusterendpoint = os.environ.get("docdbEndpoint")
 def lambda_handler(event, context):
     ##########################################New Doc DB Code###############
     client = pymongo.MongoClient(clusterendpoint, username=username, password=password, tls='true', tlsCAFile='rds-combined-ca-bundle.pem',retryWrites='false')
+    db = client.mynew_database
     print(client.list_database_names())
     print(db.list_collection_names())
     ###########################################old code##########################
