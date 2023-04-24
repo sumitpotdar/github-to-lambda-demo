@@ -21,21 +21,21 @@ def lambda_handler(event, context):
     
     ##New Collection for DB
     
-    col = db.mynewnew_democollection
+    #col = db.mynewnew_democollection
     
     ##Insert a single document
-    col.insert_one({'hello':'Amazon DocumentDB'})
+    #col.insert_one({'hello':'Amazon DocumentDB'})
     
     ##Find the document that was previously written
-    x = col.find_one({'hello':'Amazon DocumentDB'}) 
+    #x = col.find_one({'hello':'Amazon DocumentDB'}) 
     
     ##Print the result to the screen
-    print(x)
+    #print(x)
     print(client.list_database_names())
     print(db.list_collection_names())
     
     ##Drop Collection 
-    #db.drop_collection('sample_collection')
+    db.drop_collection('mynewnew_democollection')
     
     ###########################################old code##########################
       
