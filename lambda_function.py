@@ -17,7 +17,7 @@ def lambda_handler(event, context):
     client = pymongo.MongoClient(clusterendpoint, username=username, password=password, tls='true', tlsCAFile='rds-combined-ca-bundle.pem',retryWrites='false')
     
     ##Create New DB
-    db = client.sample_database
+    db = client.new_database
     
     ##New Collection for DB
     
@@ -35,7 +35,7 @@ def lambda_handler(event, context):
     #print(db.list_collection_names())
     
     ##Drop Collection 
-    db.drop_collection('new_deployment')
+    #db.drop_collection('new_deployment')
     print(client.list_database_names())
     print(db.list_collection_names())
     ###########################################old code##########################
