@@ -35,7 +35,7 @@ def lambda_handler(event, context):
     print(db.list_collection_names())
 
     ##Drop Collection
-    #db.drop_collection('new_deployment')
+    db.drop_collection('mynewnew_democollection')
     print(client.list_database_names())
     print(db.list_collection_names())
     ###########################################old code##########################
