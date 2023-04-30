@@ -43,8 +43,4 @@ def lambda_handler(event, context):
     d = {'col1': [1,2], 'col2': [3,4]}
     df = pd.DataFrame(data=d)
     print(df)
-<<<<<<< HEAD
     print('Done x1.1.1.3')
-=======
-    print('Done x1.1.1.3')
->>>>>>> c9748638b61402007e34ad0eb5b1e11b7752bd9c
