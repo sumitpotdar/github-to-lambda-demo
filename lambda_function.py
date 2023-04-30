@@ -17,11 +17,11 @@ def lambda_handler(event, context):
     client = pymongo.MongoClient(clusterendpoint, username=username, password=password, tls='true', tlsCAFile='rds-combined-ca-bundle.pem',retryWrites='false')
 
     ##Create New DB
-    db = client.LambdaNew_database
+    db = client.DemoLambda_database
 
     ##New Collection for DB
 
-    col = db.LambdaTable_collection
+    col = db.tabledemo_collection
 
     ##Insert a single document
     col.insert_one({'hello':'DocumentDB'})
