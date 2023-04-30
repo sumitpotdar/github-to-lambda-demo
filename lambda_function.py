@@ -38,4 +38,9 @@ def lambda_handler(event, context):
     #db.drop_collection('mynewnew_democollection')
     print(client.list_database_names())
     print(db.list_collection_names())
-    ###########################################old code##########################
+    ###########################################samplecode##########################
+
+    d = {'col1': [1,2], 'col2': [3,4]}
+    df = pd.DataFrame(data=d)
+    print(df)
+    print('Done x1.1.1.3')
